@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html ng-app='helloPage'>
+
+<head>
+    <title></title>
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel='shortcut icon' href='photos/icon.png' type='image/png'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css' integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd' crossorigin='anonymous'>
+    <link rel='stylesheet' type='text/css' href='styles/utoStyle.css'>
+    <link rel='stylesheet' type='text/css' href='styles/meStyle.css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="./libs/responsive-calendar/responsive-calendar.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+    <div class='socialButtons' id='socialButtons'>
+        <div class='pluso' data-background='transparent' data-options='big,round,line,horizontal,nocounter,theme=08' data-services='facebook,linkedin,twitter,vkontakte,google,email'></div>
+    </div>
+
+    <button type='button' data-toggle='modal' data-target='#contactMe' class='floatingContactForm button-clear'>
+        <img src='photos/contact.png' width='40' height='40'>
+    </button>
+
+    <nav class='navbar navbar-fixed-top navbar-light bg-primary' id='mainNavbar'>
+        <!--  <a class='navbar-brand' href='#'>You Through Others</a> -->
+        <ul class='nav navbar-nav'>
+            <li class='nav-item'>
+                <button class='button-clear' type='button' data-toggle='modal' data-target='#dialogTech' class='landPageBlock'>
+                    <div>Диалог-технология
+                    </div>
+                </button>
+            </li>
+            <li class='nav-item'>
+                <button class='button-clear' type='button' data-toggle='modal' data-target='#dialogAnswer' class='landPageBlock'>
+                    <div>Диалог-решение
+                    </div>
+                </button>
+            </li>
+            <li class='nav-item active'>
+                <button class='button-clear' type='button' data-toggle='modal' data-target='#dialog' class='landPageBlock'>
+                    <div>Обучение
+                </button>
+            </li>
+            <li class='nav-item'>
+                <button class='button-clear' type='button' data-toggle='modal' data-target='#utoCalendar' class='landPageBlock'>
+                    <div>Календарь
+                    </div>
+                </button>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div id='landingScreen'>
+        <div class="homepage-hero-module">
+            <div class="video-container">
+                <video preload="none" loop class="fillWidth" id='landingVideo'>
+                    <source src="photos/MP4/Sunset-Lapse.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="photos/WEBM/Sunset-Lapse.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+                <div class="poster hidden">
+                    <img src="photos/SnapShots/Sunset-Lapse.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class='centerBlock' id='firstCentralBlock'>
+            Техника Диалога
+            <!-- - захват ресурса эмерджентности  -->
+        </div>
+        <!--  <div class='centerBlockHigh' id='firstCentralBlock'>
+            Авторский проект Ольги Смирновой
+        </div>
+      -->
+
+        <div class='centerBlock' id='secondCentralBlock'>
+            Обучение Говорить и Думать Совместно
+        </div>
+        <div class='centerBlock' id='thirdCentralBlock'>
+            Измени качество действия человека и группы
+        </div>
+        <div class='buttonWrapperMain'>
+            <button class='toMainPartButton button-clear' id='toMainPart'><span class='box-with-text'>Узнать больше</span></button>
+        </div>
+    </div>
+
+    <!-- body scroll-->
+    <div id='landPageBody'>
+        <div class="homepage-hero-module">
+            <div class="video-container">
+                <video preload="none" loop class="fillWidth" id='bodyVideo'>
+                    <source src="photos/MP4/Beach-Ball.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="photos/WEBM/Beach-Ball.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+                <div class="poster hidden">
+                    <img src="photos/SnapShots/Beach-Ball.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class='landPageContainer'>
+            <div class='landPageInner'>
+                <div class='contentBlock schemaBlock'>
+                    <div class='headerPage' id='headerFirst'>Диалог - это Комплекс Действий при решении</div>
+
+                    <div class='carousel slide' data-ride='carousel' id='mainCarousel'>
+                        <div class='carousel-inner' role='listbox'>
+                            <div class='carousel-item active displaingDivs'>Сотрудники отбирались по необходимым компетенциям как <span style='white-space: nowrap'> команда профессионалов, но</span>
+                                <br>
+                                <br> - В коллективе открытые конфликты, срывы сроков заданий, публикация резюме на поисковиках
+                                <br>
+                                <br> - Все рабочие процессы протекают размеренно в атмосфере абсолютного комфорта без идей и предложений
+                            </div>
+                            <div class='carousel-item displaingDivs'>Каков потенциал сотрудников для изменений?
+                                <br>
+                                <br> Как мотивировать персонал на изменения?
+                            </div>
+                            <div class='carousel-item displaingDivs'>Как вовлечь персонал в профессиональную деятельность до 'состояния потока'?
+                                <br>
+                                <br> Нуждается ли организация в подобном вовлечении?
+                            </div>
+                            <div class='carousel-item displaingDivs'>В подразделениях Компании с единой корпоративной культурой, кадровой политикой, системой мотивации и вознаграждений, обучениях и развития разные показатели экономической эффективности, лояльности персонала и трудовой дисциплины.
+                            </div>
+                            <div class='carousel-item displaingDivs'>В Компанию приходят опытные, успешные на предыдущих местах работы специалисты.
+                                <br>
+                                <br> Как выстроить систему адаптации и обучения, чтобы
+                                <br>
+                                <br> - Новые сотрудники не покинули Компанию
+                                <br>
+                                <br> - Основной постоянный персонал на подвергся демотивации
+                            </div>
+                            <div class='carousel-item displaingDivs'>Сотрудники успешно прошли обучение, аттестацию, но
+                                <br>
+                                <br> - Изменений в показателях работы нет
+                                <br>
+                                <br> - Показатели экономической эффективности снизились
+                            </div>
+                            <div class='carousel-item displaingDivs'>Проект начинался с общего утверждённого плана, но через месяц все участники, как 'лебедь, рак и щука'
+                            </div>
+                        </div>
+                        <ol class='carousel-indicators'>
+                            <li data-target='#mainCarousel' data-slide-to='0' class='carusel-dots active'></li>
+                            <li data-target='#mainCarousel' data-slide-to='1' class='carusel-dots'></li>
+                            <li data-target='#mainCarousel' data-slide-to='2' class='carusel-dots'></li>
+                            <li data-target='#mainCarousel' data-slide-to='4' class='carusel-dots'></li>
+                            <li data-target='#mainCarousel' data-slide-to='5' class='carusel-dots'></li>
+                            <li data-target='#mainCarousel' data-slide-to='6' class='carusel-dots'></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class='alert alert-success' role='alert'>
+                    <strong>Техника Диалога помогает</strong> измененить Качества Действия человека/группы
+                </div>
+
+                <div class='contentBlock'>
+                    <div class='headerPage'>Здравствуйте, меня зовут Ольга Смирнова.
+                        <br>Я автор проекта 'Техника Диалога в бизнес-коммуникациях'</div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pV8DowRH1cU" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class='contentBlock'>
+                    <div class='headerPage'>В создании проекта 'Техника Диалога' меня вдохновляли и поддерживали</div>
+                    <div class='carousel slide' data-ride='carousel' id='gallaryId'>
+                        <div class='carousel-inner' role='listbox'>
+                            <div class='carousel-item active imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_010.jpeg' alt='Ф.М. Достоевский'>
+                                    <div>Ф.М. Достоевский</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_000.jpeg' alt='М.М. Бахтин'>
+                                    <div>М.М. Бахтин</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_004.jpeg' alt='Мартин Бубер'>
+                                    <div>Мартин Бубер</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_003.jpg' alt='Герман Гессе'>
+                                    <div>Герман Гессе</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_009.jpeg' alt='В.И. Вернадский'>
+                                    <div>В.И. Вернадский</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_007.jpeg' alt='Теодор Гофман'>
+                                    <div>Теодор Гофман</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_006.jpeg' alt='Мартин Хайдеггер'>
+                                    <div>Мартин Хайдеггер</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_002.jpeg' alt='Сёрен Кьеркегор'>
+                                    <div>Сёрен Кьеркегор</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_001.jpeg' alt='В.С. Библер'>
+                                    <div>В.С. Библер</div>
+                                </div>
+                            </div>
+                            <div class='carousel-item imageContainer'>
+                                <div class='fullImageDiv'>
+                                    <img src='photos/inspiration/File_005.jpeg' alt='Эдмунт Гуссерль'>
+                                    <div>Ф.М. Достоевский</div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class='carousel-indicators'>
+                            <li data-target='#gallaryId' data-slide-to='0' class='carusel-dots active'></li>
+                            <li data-target='#gallaryId' data-slide-to='1' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='2' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='3' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='4' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='5' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='6' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='7' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='8' class='carusel-dots'></li>
+                            <li data-target='#gallaryId' data-slide-to='9' class='carusel-dots'></li>
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class='alert alert-success' role='alert'>
+                    <strong>Техника Диалога помогает</strong> понять условия, чтобы коммуникация в Диалоге началась
+                </div>
+                <div class='contentBlock'>
+                    <div class='headerPage'>'Техника Диалога' позволяет раскрыть Исключительные Возможности ресурсов человеческого взаимодействия</div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pV8DowRH1cU" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class='alert alert-info' role='alert'>3 этапа диалогической коммуникации</div>
+                <div class='communicationStepsContainer'>
+                    <div class='communicationStep flexCenter' id='communicationStepFirst'>
+                        <div>
+                            1 этап
+                            <br>Предшествует коммуникации в группе
+                        </div>
+                    </div>
+                    <div class='communicationStep flexCenter' id='communicationStepSecond'>
+                        <div>
+                            2 этап
+                            <br>Коммуникация в группе
+                        </div>
+                    </div>
+                    <div class='communicationStep flexCenter' id='communicationStepThird'>
+                        <div>
+                            3 этап
+                            <br>Завершение коммуникации в группе
+                        </div>
+                    </div>
+                </div>
+
+                <div class='alert alert-success' role='alert'>
+                    <strong>Техника Диалога помогает</strong> понять признаки завершения диалогических коммуникаций
+                </div>
+
+                <div class='contentBlock columnStreth dialogCarouselContent'>
+                    <div class='headerPage' id='headerFirst'>Диалог - это Комплекс Действий при решении</div>
+                    <div class='innerBlock '>
+                        <div class='leftTitle column'>Диалог это:</div>
+                        <div class='carousel slide autoHeight' data-ride='carousel' id='dialogCarousel'>
+                            <div class='carousel-inner ' role='listbox'>
+                                <div class='carousel-item active'>Лидерство</div>
+                                <div class='carousel-item'> Ответственность</div>
+                                <div class='carousel-item'>Самоопределение</div>
+                                <div class='carousel-item '>Интеграция</div>
+                                <div class='carousel-item '>Конфликт</div>
+                                <div class='carousel-item '>Развитие</div>
+                                <div class='carousel-item '>Команда</div>
+                                <div class='carousel-item '>Образование</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='alert alert-success' role='alert'>
+                    <strong>Техника Диалога помогает</strong> понять на какой этапе происходит диалог
+                </div>
+
+                <div class='contentBlock'>
+                    <div class='headerPage'>Мы делаем себя и окружающих нас людей неконкурентноспособными</div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jbDRYlbwm60" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class='alert alert-success' role='alert'>
+                    <strong>Техника Диалога помогает</strong> предсказать результат, когда индивидуальные знания, опыт и навыки сливаются в коллективные действия
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='application/javascript' src='libs/utils.js'></script>
+    <script type='application/javascript' src='libs/tether.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js' integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7' crossorigin='anonymous'></script>
+    <script src="./libs/responsive-calendar/responsive-calendar.js"></script>
+    <script async type='application/javascript' src='./utoApp.js'></script>
+    <script async type='application/javascript' src='libs/fastclick.js'></script>
+</body>
+
+</html>

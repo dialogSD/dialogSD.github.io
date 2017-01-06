@@ -1,0 +1,94 @@
+@media all and (orientation: portrait) {
+    .meContent {
+        max-width: none;
+    }
+    .meContainer {
+        justify-content: flex-start;
+    }
+}
+@media all and (orientation: portrait) {
+    .meContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+@media all and (orientation: landscape) {
+    .meContent {
+        max-width: 50%;
+    }
+    .meContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+}
+.meContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+.meContainer {
+    display: flex;
+    height: 100%;
+    background-color: transparent;
+}
+.meTextMain {
+    width: 100%;
+    top: 0;
+    color: rgb(100, 120, 195);
+    font-size: 2.5em;
+    font-family: Lobster-Regular, 'Lobster-Regular', normal;
+    margin-bottom: 1rem;
+}
+.meText {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    top: 0;
+    color: black;
+    font-size: 1.5em;
+}
+.modal-body {
+    color: black;
+}
+.form-group {
+    width: 100%;
+}
+.form-control {
+    background-color: transparent;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+.socialButton {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    background-color: white !important;
+    transition: all .2s;
+}
+.socialButton:hover {
+  box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.8);
+}
+.socialIcon {
+    width:52px;
+    height:52px;
+    margin-left: -3px;
+    margin-top: -3px;
+    border: none;
+    outline: none !important;
+}
+.flexbox{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}

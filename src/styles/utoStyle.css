@@ -268,10 +268,6 @@ shadows
     font-size: 0.6em;
     border-top: 1px solid #1199EE;
 }
-@font-face {
-    font-family: Lobster-Regular;
-    src: url(../fonts/lobster2.ttf);
-}
 
 /*--
 commynication block

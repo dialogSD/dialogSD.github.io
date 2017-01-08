@@ -30,7 +30,7 @@ gulp.task('minifyJs', () => {
 });
 
 gulp.task('concatHtml', () => {
-    return gulp.src(['./src/mainPage.htm', './src/pages/ru/*.htm'])
+    return gulp.src(['./src/pages/mainPage.htm', './src/pages/ru/*.htm'])
         .pipe(concat('home.html'))
         .pipe(gulp.dest('src'));
 });
@@ -50,8 +50,8 @@ gulp.task('concatCss', () => {
         .pipe(gulp.dest('src'));
 });
 
-gulp.task('cleanCSS', () => {
-    return gulp.src('./srs/home.css')
+gulp.task('cleanCss', () => {
+    return gulp.src('src/home.css')
         .pipe(cleanCSS())
         .pipe(rename('index.css'))
         .pipe(gulp.dest(''));
@@ -63,7 +63,7 @@ gulp.task('concatJs', () => {
         .pipe(gulp.dest('minified'));
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
     return del([
         'src/home.css',
         'src/home.html'
@@ -76,5 +76,5 @@ gulp.task('watch', () => {
     gulp.watch('./src/mainPage.htm', ['default']);
 });
 
-gulp.task('default', gulpSequence(['concatHtml', 'concatCss'], ['clearHtml', 'cleanCSS'], 'clean'));
+gulp.task('default', gulpSequence(['concatHtml', 'concatCss'], ['clearHtml', 'cleanCss'], 'clean'));
 gulp.task('dev', gulpSequence('default', 'watch'));

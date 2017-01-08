@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app='helloPage'>
+
+<head>
+    <title></title>
+    <meta name='Description' content=''>
+    <meta name='Keywords' content=''>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel='shortcut icon' href='photos/icon.png' type='image/png'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css' integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd' crossorigin='anonymous'>
+    <link rel='stylesheet' type='text/css' href='styles/meStyle.css'>
+    <link rel='stylesheet' type='text/css' href='styles/utoStyle.css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter"></div>
+            <video preload="none" loop class="fillWidth" id='landingVideo'>
+                <source src="photos/MP4/Meeting-Room.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="photos/WEBM/Meeting-Room.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <img src="photos/SnapShots/Meeting-Room.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class='meContainer'>
+        <div class='meContent'>
+
+            <div class='meTextMain'>Ольга Смирнова</div>
+
+            <div class='meText'>Автор проекта «Техника Диалога» Филолог. Профессиональная подготовка : «Управление персоналом» и «Бизнес – тренер». Более 15 лет работы в реальном бизнесе.
+            </div>
+
+            <div class='meText'>Раскрывая для себя уникальность и возможности Диалога, обретая потребность в диалоговой форме коммуникации,
+                распознавая все острые углы и подводные течения, таящиеся внутри Диалога
+            </div>
+
+            <div class='meText'>Я в социальных сетях</div>
+            <div class='meText flexbox'>
+                <button class='socialButton'> <img src='photos/facebook.png' class='socialIcon'></button>
+                <button class='socialButton'> <img src='photos/twitter.png' class='socialIcon'></button>
+                <button class='socialButton'><img src='photos/linkedin.png' class='socialIcon'> </button>
+                <button class='socialButton'><img src='photos/instagram.png' class='socialIcon'> </button>
+            </div>
+        </div>
+        <div class='meContent'>
+            <form class="form-group">
+                <div class="form-group">
+                    <label for="inputName">Ваше имя</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Представтесь">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Ваша почта</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Почта@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="inputBody">Ваше сообщение</label>
+                    <input type="text" class="form-control" id="inputBody" placeholder="Вы мне понравились:)">
+                </div>
+                <button id="send_email" type="button" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type='application/javascript' src='libs/utils.js'></script>
+    <script type='application/javascript' src='libs/tether.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js' integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7' crossorigin='anonymous'></script>
+
+    <script async type='application/javascript' src='libs/fastclick.js'></script>
+    <script type='text/javascript' src='utoApp.js'></script>
+</body>
+
+</html>

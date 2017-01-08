@@ -1,38 +1,15 @@
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    gutil = require('gulp-util'),
-    path = require('path'),
-    sourcemaps = require('gulp-sourcemaps'),
+const gulp = require('gulp'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     htmlmin = require('gulp-htmlmin'),
-    minifyCss = require('gulp-minify-css');
+    cleanCSS = require('gulp-clean-css'),
+    gulpSequence = require('gulp-sequence'),
+    rename = require("gulp-rename"),
+    concatCss = require('gulp-concat-css'),
+    del = require('del');
 
-gulp.task('scripts', function() {
-    return gulp.src(['./mainPage.htm', './pages/ru/utoAnswers.htm'])
-        .pipe(concat('home.htm'))
-        .pipe(gulp.dest('./bundle/'));
-});
-//Uglifies
-
-gulp.task('uglifying', function() {
-    return gulp.src('utoApp.js')
-        .pipe(uglify()).on('error', gutil.log)
-        .pipe(gulp.dest('dist/'));
-});
-
-gulp.task('minify-css', function() {
-    return gulp.src('styles/utoStyle.css')
-        .pipe(minifyCss()).on('error', gutil.log)
-        .pipe(gulp.dest('minified/bundle'));
-});
-
-gulp.task('styles', function() {
-    console.log('runs styles');
-});
-
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
     return gulp.src('photos/*.png')
         .pipe(imagemin({
             progressive: true,
@@ -44,38 +21,60 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('minified/'));
 });
 
-gulp.task('minifyHtm', function() {
-    return gulp.src('minified/home.htm')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest('./'))
-});
-/*
-gulp.task('minifyJs', function() {
+gulp.task('minifyJs', () => {
     return gulp.src('minified/bundle.js')
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('./'))
-});
-*/
-gulp.task('concatHtml', function() {
-    return gulp.src(['mainPage.htm', 'pages/ru/*.htm'])
-        .pipe(concat('home.htm'))
-        .pipe(gulp.dest('minified'));
+        .pipe(gulp.dest('./'));
 });
 
-gulp.task('concatJs', function() {
+gulp.task('concatHtml', () => {
+    return gulp.src(['./src/mainPage.htm', './src/pages/ru/*.htm'])
+        .pipe(concat('home.html'))
+        .pipe(gulp.dest('src'));
+});
+
+gulp.task('clearHtml', () => {
+    return gulp.src('./src/home.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest(''));
+});
+
+gulp.task('concatCss', () => {
+    return gulp.src('./src/styles/*.css')
+        .pipe(concat('home.css'))
+        .pipe(gulp.dest('src'));
+});
+
+gulp.task('cleanCSS', () => {
+    return gulp.src('./srs/home.css')
+        .pipe(cleanCSS())
+        .pipe(rename('index.css'))
+        .pipe(gulp.dest(''));
+});
+
+gulp.task('concatJs', () => {
     return gulp.src('utoApp.js')
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('minified'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('utoApp.js', ['uglifying']);
-    gulp.watch('styles/utoStyle.css', ['minify-css']);
-    gulp.watch('pages/ru/*.htm', ['minify-html']);
-})
+gulp.task('clean', function () {
+    return del([
+        'src/home.css',
+        'src/home.html'
+    ]);
+});
 
-gulp.task('default', ['concatHtml',/* 'concatJs',*/ 'minifyHtm'/*, 'minifyJs''minify-css'*/,'imagemin' ]);
+gulp.task('watch', () => {
+    gulp.watch('./src/styles/utoStyle.css', ['default']);
+    gulp.watch('./src/pages/ru/*.htm', ['default']);
+    gulp.watch('./src/mainPage.htm', ['default']);
+});
+
+gulp.task('default', gulpSequence(['concatHtml', 'concatCss'], ['clearHtml', 'cleanCSS'], 'clean'));
+gulp.task('dev', gulpSequence('default', 'watch'));

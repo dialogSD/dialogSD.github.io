@@ -17,7 +17,9 @@ body {
     width: 100%;
     background-color: #005566;
     top: 0;
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px black;
+    padding: 1rem;
+    z-index: 100;
 }
 ul, menu, dir {
     -webkit-margin-before: 0;
@@ -75,56 +77,15 @@ ul, menu, dir {
     border-bottom-right-radius: 5px;
 }
 
-  @-webkit-keyframes pulse {
-      0% {
-          -webkit-transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-    }
-    100% {
-        -webkit-transform: scale(1);
-    }
-}
-@-moz-keyframes pulse {
-    0% {
-        -moz-transform: scale(1);
-    }
-    50% {
-        -moz-transform: scale(1.1);
-    }
-    100% {
-        -moz-transform: scale(1);
-    }
-}
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.landPageBlock {
-    width: 150px;
+.navigationButton {
+    width: auto;
     height: auto;
-    z-index: 1000;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    background-color: transparent;
+    color: white;
+    border: none;
 }
-.landPageBlock:hover {
-    -webkit-animation: pulse 1s ease 0s infinite normal;
-    -o-animation: pulse 1s ease 0s infinite normal;
-    -moz-animation: pulse 1s ease 0s infinite normal;
-    animation: pulse 1s ease 0s infinite normal;
+.navigationButton:hover {
+
 }
 .buttonWrapper {
     width: 100%;
@@ -150,7 +111,6 @@ ul, menu, dir {
     border-radius: 5px;
     text-shadow: none;
     padding: 5px;
-    z-index: 10;
 }
 a {
     display: inline-block;
@@ -164,7 +124,6 @@ ul {
     margin-top: 1.5rem;
     width: 100%;
     display: inline-block;
-    z-index: 9;
 }
 .programsText:first-child{
   margin-top: 0;
@@ -182,7 +141,6 @@ ul {
     font-size: 2vmin;
     color: blue;
     width: auto;
-    z-index: 10;
 }
 #firstCentralBlock {
     font-size: 2.5rem;
@@ -198,7 +156,6 @@ ul {
 .headerBlocks {
     width: auto;
     height: auto;
-    z-index: 15;
     padding: 5px;
     margin: 5px;
 }
@@ -206,9 +163,6 @@ ul {
     width: 40px;
     height: 40px;
     background-size: cover;
-}
-.sideHeaderBlocks {
-    z-index: 10;
 }
 #centralHeaderBlocks {
     height: 4vmin;
@@ -239,9 +193,6 @@ shadows
 .communicationStep, .displaingDivsResult {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
 }
-.centerBlock{
-  z-index: 11;
-}
 .alert {
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -260,7 +211,6 @@ shadows
     bottom: 1%;
     height: auto;
     width: auto;
-    z-index: 99999;
 }
 
 .linkDescription {
@@ -287,7 +237,6 @@ commynication block
     height: 200px;
     top: 0;
     left: 0;
-    z-index: 9999;
     perspective: 1000px;
     display: flex;
     flex-direction: row;
@@ -345,7 +294,6 @@ animation properties
     width: calc(100% - 30px);
     border-top: 1px solid white;
     text-shadow: none;
-    z-index: 20;
 }
 .collectionGrid {
     display: flex;
@@ -353,6 +301,7 @@ animation properties
     justify-content: center;
     align-items: center;
     align-content: center;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
@@ -387,8 +336,7 @@ animation properties
 .autoHeight {
     height: auto;
 }
-.carousel-item {
-    width: 100%;
+.gridItem {
     height: 100%;
     flex-direction: column;
     justify-content: center;

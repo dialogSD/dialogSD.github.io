@@ -20,6 +20,7 @@ body {
     text-shadow: 1px 1px black;
     padding: 1rem;
     z-index: 100;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 ul, menu, dir {
     -webkit-margin-before: 0;
@@ -33,6 +34,7 @@ ul, menu, dir {
     align-items: center;
     height: 100%;
     margin: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .fullImageDiv {
     display: flex;
@@ -293,7 +295,9 @@ animation properties
     margin: 5vh 15px;
     width: calc(100% - 30px);
     border-top: 1px solid white;
-    text-shadow: none;
+}
+.contentBlock:first-of-type {
+    margin: 10vh 15px 5vh 15px;
 }
 .collectionGrid {
     display: flex;
@@ -304,7 +308,6 @@ animation properties
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 .column {
     height: auto;
@@ -363,6 +366,6 @@ outline: none !important;
 .textHigh{
   font-size: 1.1rem;
 }
-.modal-dialog input,.modal-dialog button{
-  text-shadow: none;
+.modal{
+    display: none;
 }

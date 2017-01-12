@@ -128,7 +128,7 @@ ul {
     display: inline-block;
 }
 .programsText:first-child{
-  margin-top: 0;
+    margin-top: 0;
 }
 .headerFlex {
     height: auto;
@@ -358,14 +358,24 @@ button, optgroup, select, textarea {
 }
 
 .button-clear:hover {
-cursor: pointer !important;
+    cursor: pointer !important;
 }
-.button-clear:active,  button:focus{
-outline: none !important;
+.button-clear:active,  button:focus {
+    outline: none !important;
 }
-.textHigh{
-  font-size: 1.1rem;
+.textHigh {
+    font-size: 1.1rem;
 }
-.modal{
-    display: none;
+.modal {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.modal-dialog {
+
 }

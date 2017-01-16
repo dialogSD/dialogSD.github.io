@@ -74,10 +74,6 @@ ul, menu, dir {
 .schemaBlock{
     height: 400px !important;
 }
-.videoContent{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
 
 .navigationButton {
     width: auto;
@@ -130,15 +126,6 @@ ul {
 .programsText:first-child{
   margin-top: 0;
 }
-.headerFlex {
-    height: auto;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
 .centerBlockHigh {
     font-size: 2vmin;
     color: blue;
@@ -172,19 +159,6 @@ ul {
 html, body {
     height: 100%;
     width: 100%;
-}
-
-.landingScreenCenter {
-    margin-top: 50px;
-}
-.landPageBody {
-    width: 100%;
-    overflow: hidden;
-    background-color: transparent;
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 /*
@@ -327,12 +301,7 @@ animation properties
     width: 50%;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
-.columnStreth {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-}
+
 .dialogCarouselContent {
     height: 100px;
 }
@@ -366,6 +335,13 @@ outline: none !important;
 .textHigh{
   font-size: 1.1rem;
 }
-.modal{
-    display: none;
+.modal {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150,150,150,0.7);
+    z-index: 1000;
 }

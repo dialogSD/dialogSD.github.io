@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     htmlmin = require('gulp-htmlmin'),
     cleanCSS = require('gulp-clean-css'),
+    cleanJs = require('gulp-uglify'),
     gulpSequence = require('gulp-sequence'),
     rename = require("gulp-rename"),
     concatCss = require('gulp-concat-css'),
@@ -21,12 +22,11 @@ gulp.task('imagemin', () => {
         .pipe(gulp.dest('minified/'));
 });
 
-gulp.task('minifyJs', () => {
-    return gulp.src('minified/bundle.js')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest('./'));
+gulp.task('cleanJs', () => {
+    return gulp.src('./src/home.js')
+        .pipe(cleanJs())
+        .pipe(rename('index.js'))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('concatHtml', () => {
@@ -58,15 +58,16 @@ gulp.task('cleanCss', () => {
 });
 
 gulp.task('concatJs', () => {
-    return gulp.src('utoApp.js')
-        .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('minified'));
+    return gulp.src('src/scripts/*.js')
+        .pipe(concat('index.js'))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('clean', () => {
     return del([
         'src/home.css',
-        'src/home.html'
+        'src/home.html',
+        'src/home.js'
     ]);
 });
 
@@ -76,5 +77,5 @@ gulp.task('watch', () => {
     gulp.watch('./src/mainPage.htm', ['default']);
 });
 
-gulp.task('default', gulpSequence(['concatHtml', 'concatCss'], ['clearHtml', 'cleanCss'], 'clean'));
+gulp.task('default', gulpSequence(['concatHtml', 'concatCss', 'concatJs'], ['clearHtml', 'cleanCss'], 'clean'));
 gulp.task('dev', gulpSequence('default', 'watch'));

@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css'),
+    cleanJs = require('gulp-uglify'),
     gulpSequence = require('gulp-sequence'),
     rename = require("gulp-rename"),
     concatCss = require('gulp-concat-css'),
@@ -20,6 +21,13 @@ gulp.task('imagemin', () => {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('minified/'));
+});
+
+gulp.task('cleanJs', () => {
+    return gulp.src('./src/home.js')
+        .pipe(cleanJs())
+        .pipe(rename('index.js'))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('concatHtml', () => {
@@ -52,8 +60,8 @@ gulp.task('cleanCss', () => {
 
 gulp.task('concatJs', () => {
     return gulp.src('src/scripts/*.js')
-        .pipe(concat('home.js'))
-        .pipe(gulp.dest('src'));
+        .pipe(concat('index.js'))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('cleanJs', () => {

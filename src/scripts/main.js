@@ -13,15 +13,31 @@ window.onload = () => {
         technologyPage.style.visibility = 'visible';
     });
 
+    technologyPage.getElementsByClassName('close')[0].addEventListener('click', () => {
+        technologyPage.style.visibility = 'hidden';
+    });
+
     document.getElementById('calendar').addEventListener('click', () => {
         calendarPage.style.visibility = 'visible';
+    });
+
+    calendarPage.getElementsByClassName('close')[0].addEventListener('click', () => {
+        calendarPage.style.visibility = 'hidden';
     });
 
     document.getElementById('training').addEventListener('click', () => {
         trainingPage.style.visibility = 'visible';
     });
 
+    trainingPage.getElementsByClassName('close')[0].addEventListener('click', () => {
+        trainingPage.style.visibility = 'hidden';
+    });
+
     document.getElementById('solution').addEventListener('click', () => {
         solutionPage.style.visibility = 'visible';
+    });
+
+    solutionPage.getElementsByClassName('close')[0].addEventListener('click', () => {
+        solutionPage.style.visibility = 'hidden';
     });
 };

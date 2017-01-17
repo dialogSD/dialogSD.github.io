@@ -27,12 +27,12 @@ function mcImgSlider(i){for(var I=function(a){return document.getElementById(a)}
 //---------------*/
 window.onload = () => {
     const solutionPage = document.getElementById('solutionPage');
-    const calendarPage = document.getElementById('calendarPage');
+    const technologyPage = document.getElementById('technologyPage');
     const trainingPage = document.getElementById('trainingPage');
     const calendarPage = document.getElementById('calendarPage');
 
     document.getElementById('technology').addEventListener('click', () => {
-        solutionPage.style.visibility = 'visible';
+        technologyPage.style.visibility = 'visible';
     });
 
     document.getElementById('calendar').addEventListener('click', () => {
@@ -40,10 +40,10 @@ window.onload = () => {
     });
 
     document.getElementById('training').addEventListener('click', () => {
-
+        trainingPage.style.visibility = 'visible';
     });
 
-    document.getElementById('calendar').addEventListener('click', () => {
-
+    document.getElementById('solution').addEventListener('click', () => {
+        solutionPage.style.visibility = 'visible';
     });
-}
+};

@@ -344,8 +344,14 @@ button, optgroup, select, textarea {
     height: 100%;
     background-color: rgba(150,150,150,0.7);
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
-.modal-dialog {
-
+.modal-content {
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 1rem;
 }

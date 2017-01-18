@@ -45,10 +45,21 @@ window.onload = () => {
         selector: '.dialogStep',
         duration: 200,
         easing: 'ease-out',
-        perPage: 1,
+        perPage: 2,
         startIndex: 0,
         draggable: true,
         threshold: 20,
-        loop: false,
+        loop: true
+    });
+
+    new Siema({
+        selector: '.dialogSolution',
+        duration: 200,
+        easing: 'ease-out',
+        perPage: 2,
+        startIndex: 0,
+        draggable: true,
+        threshold: 20,
+        loop: true
     });
 };

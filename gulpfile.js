@@ -80,7 +80,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./src/styles/utoStyle.css', ['default']);
+    gulp.watch('./src/styles/*.css', ['default']);
     gulp.watch('./src/pages/ru/*.htm', ['default']);
     gulp.watch('./src/mainPage.htm', ['default']);
 });

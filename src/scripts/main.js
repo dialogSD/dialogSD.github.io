@@ -40,4 +40,15 @@ window.onload = () => {
     solutionPage.getElementsByClassName('close')[0].addEventListener('click', () => {
         solutionPage.style.visibility = 'hidden';
     });
+
+    new Siema({
+        selector: '.dialogStep',
+        duration: 200,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        threshold: 20,
+        loop: false,
+    });
 };

@@ -51,10 +51,6 @@ ul, menu, dir {
     padding: 1vmin;
     z-index: 99999;
 }
-.displaingDivs {
-    padding: 5px;
-    height: auto;
-}
 .nabar:hover {
     background-color: transparent;
 }
@@ -65,7 +61,7 @@ ul, menu, dir {
     background: white;
 }
 
-.headerPage{
+.headerPage {
     padding-top:0.2rem;
     padding-bottom:0.2rem;
     border-top-left-radius: 5px;
@@ -78,9 +74,14 @@ ul, menu, dir {
 .navigationButton {
     width: auto;
     height: auto;
-    background-color: transparent;
     color: white;
+}
+button {
+    background-color: transparent;
     border: none;
+}
+button:hover {
+    cursor: pointer;
 }
 .navigationButton:hover {
 
@@ -148,11 +149,6 @@ ul {
     padding: 5px;
     margin: 5px;
 }
-.toRightArrow {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-}
 #centralHeaderBlocks {
     height: 4vmin;
 }
@@ -166,13 +162,8 @@ shadows
 */
 
 .modalContainer, .modalContainerOverlap,
-.communicationStep, .displaingDivsResult {
+.communicationStep {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
-}
-.alert {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    border-radius: 0;
 }
 .headerPage {
     width: 100%;
@@ -180,21 +171,6 @@ shadows
     font-size: 1.4rem;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
-
-.socialButtons {
-    position: fixed;
-    left: 1%;
-    bottom: 1%;
-    height: auto;
-    width: auto;
-}
-
-.linkDescription {
-    width: 100%;
-    font-size: 0.6em;
-    border-top: 1px solid #1199EE;
-}
-
 /*--
 commynication block
 ---*/
@@ -332,9 +308,6 @@ button, optgroup, select, textarea {
 .button-clear:active,  button:focus {
     outline: none !important;
 }
-.textHigh {
-    font-size: 1.1rem;
-}
 .modal {
     visibility: hidden;
     position: fixed;
@@ -354,4 +327,9 @@ button, optgroup, select, textarea {
     background-color: white;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 1rem;
+}
+
+button .close {
+    position: absolute;
+    right: 0;
 }

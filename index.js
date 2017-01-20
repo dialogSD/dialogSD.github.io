@@ -12,6 +12,7 @@ window.onload = () => {
 
     document.getElementById('technology').addEventListener('click', () => {
         technologyPage.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
     });
 
     technologyPage.getElementsByClassName('close')[0].addEventListener('click', () => {
@@ -20,6 +21,7 @@ window.onload = () => {
 
     document.getElementById('calendar').addEventListener('click', () => {
         calendarPage.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
     });
 
     calendarPage.getElementsByClassName('close')[0].addEventListener('click', () => {
@@ -28,6 +30,7 @@ window.onload = () => {
 
     document.getElementById('training').addEventListener('click', () => {
         trainingPage.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
     });
 
     trainingPage.getElementsByClassName('close')[0].addEventListener('click', () => {
@@ -36,6 +39,7 @@ window.onload = () => {
 
     document.getElementById('solution').addEventListener('click', () => {
         solutionPage.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
     });
 
     solutionPage.getElementsByClassName('close')[0].addEventListener('click', () => {

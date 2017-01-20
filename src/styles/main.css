@@ -277,6 +277,11 @@ animation properties
     justify-content: center;
 }
 
+.gridItem span {
+    text-align: center;
+    width: 100%;
+}
+
 .carousel-indicators {
     left: 0;
     width: 100%;
